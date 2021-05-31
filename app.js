@@ -128,24 +128,52 @@ function generateResume() {
 
 
 
-// =======================When the button is clicked run three function==================
+// ========When the button is clicked run three function==================
 
 resumeButton.addEventListener('click', () => {
     
-//1. =======================The class .scale-cv is added to the body================
+//1. ===========The class .scale-cv is added to the body================
 scaleCv()
     
  //2. =======================The PDG is generated==================   
 
 generateResume()
     
- //3. =====================The .scale-cv class is remove after 5 second==================
+ //3. ==============The .scale-cv class is remove after 5 second===============
 
     setTimeout(removeScale,5000)
     
 })
 
+// typing script----
+var typed = new Typed(".typing", {
+    strings: [
+      "And I'm a: Web Designer.",
+      "And I'm a: YouTuber.",
+      "And I'm a: Freelancer.",
+      "And I'm a: Self Motivator.",
+      "And I'm a: Blogger.",
+    ],
+    typeSpeed: 30,
+    backSpeed: 10,
+    loop: true,
+    smartBackspace: true,
+    shuffle: true,
+    cursorChar: '❤',
+  });
+  
+  //TODO: custom progress bar script----------->
 
+const progress = document.getElementById("progressbar");
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function () {
+  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+  progress.style.height = progressHeight + "%";
+};
 
-
-
+// TODO:custom cursor script---------------------->
+const pos = document.documentElement;
+pos.addEventListener("mousemove", (e) => {
+  pos.style.setProperty("--x", e.clientX + "px");
+  pos.style.setProperty("--y", e.clientY + "px");
+});

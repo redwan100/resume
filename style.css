@@ -207,6 +207,7 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color:var(--text-color);
+    cursor: none;
 }
 h1,h2,h3,ul,p{
     margin:0;
@@ -527,6 +528,7 @@ img{
     border-radius:.4rem;
     z-index: var(--z-tooltip);
     transition:.4s ease;
+    cursor: pointer;
     overflow: hidden;
 }
 .scroll-icon{
@@ -615,3 +617,63 @@ img{
 
     }
 }
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+#scrollPath {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  #progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, #008aaf, #00ffe7);
+    animation: animated 5s linear infinite;
+  }
+  @keyframes animated {
+    0%,
+    100% {
+      filter: hue-rotate(0);
+    }
+    50% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  #progressbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
+  }
+
+  .cursor {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    clip-path: circle(10px at var(--x) var(--y));
+    background: black;
+    pointer-events: none;
+    transition: 0.1s ease;
+    mix-blend-mode: none;
+    cursor: none;
+    transform: scale(1);
+    z-index: 19;
+    pointer-events: none;
+    /* cursor: none; */
+  }
+
+

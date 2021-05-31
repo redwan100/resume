@@ -14,14 +14,16 @@
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!-- jQuery Link-------------------------------- -->
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.js"
-  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
 
   </head>
   <body>
+      <div id="progressbar"></div>
+      <div id="scrollPath"></div>
     <!-- =======================HEADER================ -->
     <header class="header" id="header">
         <nav class="nav bd-container">
@@ -88,8 +90,8 @@
                         <div class="home-data bd-grid">
                             <img src="./pic/pic5.jpg" alt="" class="home-img">
 
-                            <h1 class="home-title">REDWAN <b>ISLAM</b></h1>
-                            <h3 class="home-profession">Web Developer</h3>
+                            <h1 class="home-title">REDWAN ISLAM</h1>
+                            <h3 class="home-profession"><span class="typing"></span></h3>
 
            <!-- ===============Button to download CV============ -->
                             <div>
@@ -389,7 +391,7 @@
      <div class="scroll-top" id="scroll-top">
         <i class='bx bx-up-arrow-alt scroll-icon' ></i>
      </div>
-    
+    <div class="cursor"></div>
      <!-- Html to PDF script link============================= -->
      <script src="./html2pdf.bundle.min.js"></script>
 
