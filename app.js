@@ -57,7 +57,7 @@ window.addEventListener('scroll', () => {
 //     scrollTo(0,0)
 // })
 if (scrollTop) {
-    scrollTop.addEventListener('click', () => {
+    scrollTop.addEventListener('click', (e) => {
         scrollTo(0,0)
     })
 }
@@ -148,17 +148,17 @@ generateResume()
 // typing script----
 var typed = new Typed(".typing", {
     strings: [
-      "And I'm a: Web Designer.",
-      "And I'm a: YouTuber.",
-      "And I'm a: Freelancer.",
-      "And I'm a: Self Motivator.",
-      "And I'm a: Blogger.",
+      "And I'm a Web Designer",
+      "And I'm a YouTuber",
+      "And I'm a Freelancer",
+      "And I'm a Self Motivator",
+      "And I'm a Blogger",
     ],
     typeSpeed: 30,
     backSpeed: 10,
     loop: true,
     smartBackspace: true,
-    shuffle: true,
+    // shuffle: true,
     cursorChar: '❤',
   });
   
@@ -171,9 +171,137 @@ window.onscroll = function () {
   progress.style.height = progressHeight + "%";
 };
 
-// TODO:custom cursor script---------------------->
-const pos = document.documentElement;
-pos.addEventListener("mousemove", (e) => {
-  pos.style.setProperty("--x", e.clientX + "px");
-  pos.style.setProperty("--y", e.clientY + "px");
+
+
+
+// TODO: section shadow script--------------
+
+const homeSec = document.getElementById('home');
+const myName = document.querySelector('.home .home-title');
+
+
+homeSec.addEventListener('mousemove', function () {
+    homeSec.classList.add('shadow');
+})
+
+homeSec.addEventListener('mouseleave', function (e) {
+
+    homeSec.classList.remove('shadow');
 });
+
+
+// TODO: section shadow script--------------
+
+const socialSec = document.querySelector('.social-section');
+
+socialSec.addEventListener('mousemove', function (e) {
+    socialSec.classList.add('shadow');
+});
+
+
+
+socialSec.addEventListener('mouseleave', function () {
+    socialSec.classList.remove('shadow');
+    socialSec.style.transition = '.3s'
+})
+
+
+
+const profileSec = document.getElementById('profile');
+profileSec.addEventListener('mousemove', function () {
+    profileSec.classList.add('shadow');
+});
+
+
+
+
+
+
+profileSec.addEventListener('mouseleave', function () {
+    profileSec.classList.remove('shadow');
+    profileSec.style.transition='.3s'
+})
+
+
+const educationSec = document.getElementById('education');
+educationSec.addEventListener('mousemove', function () {
+    educationSec.classList.add('shadow');
+});
+
+educationSec.addEventListener('mouseleave', function () {
+    educationSec.classList.remove('shadow');
+    educationSec.style.transition='.3s'
+})
+
+
+const skillSec = document.getElementById('skills');
+skillSec.addEventListener('mousemove', function () {
+    skillSec.classList.add('shadow');
+});
+
+skillSec.addEventListener('mouseleave', function () {
+    skillSec.classList.remove('shadow');
+    skillSec.style.transition='.3s'
+})
+
+const experienceSec = document.getElementById('experience');
+experienceSec.addEventListener('mousemove', function () {
+    experienceSec.classList.add('shadow');
+});
+
+experienceSec.addEventListener('mouseleave', function () {
+    experienceSec.classList.remove('shadow');
+    experienceSec.style.transition = '.3s'
+})
+
+
+
+
+const certificateSec = document.getElementById('certificates');
+certificateSec.addEventListener('mousemove', function () {
+    certificateSec.classList.add('shadow');
+});
+
+certificateSec.addEventListener('mouseleave', function () {
+    certificateSec.classList.remove('shadow');
+    certificateSec.style.transition='.3s'
+})
+
+
+const referenceSec = document.getElementById('reference');
+referenceSec.addEventListener('mousemove', function () {
+    referenceSec.classList.add('shadow');
+});
+
+referenceSec.addEventListener('mouseleave', function () {
+    referenceSec.classList.remove('shadow');
+    referenceSec.style.transition='.3s'
+})
+
+
+
+
+const languageSec = document.getElementById('languages');
+languageSec.addEventListener('mousemove', function () {
+    languageSec.classList.add('shadow');
+});
+
+languageSec.addEventListener('mouseleave', function () {
+    languageSec.classList.remove('shadow');
+    languageSec.style.transition='.3s'
+})
+
+
+
+
+const interestSec = document.getElementById('interests');
+interestSec.addEventListener('mousemove', function () {
+    interestSec.classList.add('shadow');
+});
+
+interestSec.addEventListener('mouseleave', function () {
+    interestSec.classList.remove('shadow');
+    interestSec.style.transition='.3s'
+})
+
+

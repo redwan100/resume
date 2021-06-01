@@ -97,7 +97,16 @@ body.scale-cv{
 
 
 
-
+/* Reusable class================= */
+.shadow{
+    box-shadow: 1px 1px 40px rgba(0, 0, 0,0.2);        
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    margin-bottom: var(--mb-1);
+    margin-top: var(--mb-2);
+    transition: all .3s ease;
+    transform: translateZ(50px);
+}
 
 
 
@@ -197,7 +206,9 @@ body.scale-cv .theme-change,
     column-gap: 2.5rem;
 }
 
-
+.home-title{
+    transition: .4s;
+}
 
 
 body{
@@ -207,7 +218,8 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color:var(--text-color);
-    cursor: none;
+    /* cursor: none; */
+    
 }
 h1,h2,h3,ul,p{
     margin:0;
@@ -335,6 +347,7 @@ img{
 /* ==========Home=========== */
 .home{
     position: relative;
+    transition: .3s ease;
 }
 .home-container{
     gap: 3rem;
@@ -385,7 +398,9 @@ img{
     color:var(--container-color);
 }
 
+
 /* =============SOCIAL========= */
+
 .social-container{
     grid-template-columns: max-content;
     gap: 1rem;
@@ -408,7 +423,19 @@ img{
 .profile-description{
     text-align: center;
 }
+
+
+
 /* ===========Education and Experience=========== */
+
+.education-shadow{
+    box-shadow: 1px 1px 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: var(--mb-1);
+    margin-top: var(--mb-2);
+    transition: all .3s ease;
+}
 .education-content,
 .experience-content{
     display:flex;
@@ -453,7 +480,10 @@ img{
 }
 
 
+
 /* ===========SKILLS AND LANGUAGES============ */
+
+
 .skills-content,
 .language-content{
     grid-template-columns: repeat(2,1fr);
@@ -478,12 +508,17 @@ img{
 }
 
 /* ===========CERTIFICATES ============ */
+
+
 .certificates-title{
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-1);
 }
 
 /* ===========REFERENCE ============ */
+
+
+
 .reference-content {
     gap:.25rem
 }
@@ -530,6 +565,7 @@ img{
     transition:.4s ease;
     cursor: pointer;
     overflow: hidden;
+    visibility: hidden;
 }
 .scroll-icon{
     font-size: 1.2rem;
@@ -550,6 +586,7 @@ img{
 }
 .show{
     bottom:5rem;
+    visibility: visible;
 }
 
 
@@ -657,23 +694,8 @@ img{
     height: 100%;
     filter: blur(50px);
   }
+ 
 
-  .cursor {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    clip-path: circle(10px at var(--x) var(--y));
-    background: black;
-    pointer-events: none;
-    transition: 0.1s ease;
-    mix-blend-mode: none;
-    cursor: none;
-    transform: scale(1);
-    z-index: 19;
-    pointer-events: none;
-    /* cursor: none; */
-  }
+
 
 
