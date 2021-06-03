@@ -148,17 +148,17 @@ generateResume()
 // typing script----
 var typed = new Typed(".typing", {
     strings: [
-      "And I'm a Web Designer",
-      "And I'm a YouTuber",
-      "And I'm a Freelancer",
-      "And I'm a Self Motivator",
-      "And I'm a Blogger",
+      "And I'm a Freelancer...",
+      "And I'm a Web Designer...",
+      "And I'm a Web Developer...",
+      "And I'm a YouTuber...",
+      "And I'm a Self Motivator...",
+      "And I'm a Blogger...",
     ],
     typeSpeed: 30,
     backSpeed: 10,
     loop: true,
     smartBackspace: true,
-    // shuffle: true,
     cursorChar: '❤',
   });
   
@@ -304,8 +304,14 @@ interestSec.addEventListener('mouseleave', function () {
     interestSec.style.transition='.3s'
 })
 
+// TODO: preloader ===========================
 
-// const loader = document.querySelector('.loader');
-// setTimeout(() => {
-//     $('.loader').fadeToggle()
-// }, 3000);
+
+const loader = document.querySelector('.loader');
+setTimeout(() => {
+    $('.loader').fadeToggle()
+}, 3000);
+
+setTimeout(() => {
+    
+}, 3000);
