@@ -161,6 +161,18 @@ var typed = new Typed(".typing", {
     smartBackspace: true,
     cursorChar: '❤',
   });
+
+
+
+  var typed = new Typed(".typing1", {
+    strings: [
+      "REDWAN ISLAM",
+    ],
+    typeSpeed: 100,
+    backSpeed:10,
+    // loop: true,
+    smartBackspace: true,
+  });
   
   //TODO: custom progress bar script----------->
 
