@@ -163,17 +163,6 @@ var typed = new Typed(".typing", {
   });
 
 
-
-  var typed = new Typed(".typing1", {
-    strings: [
-      "REDWAN ISLAM",
-    ],
-    typeSpeed: 100,
-    backSpeed:10,
-    // loop: true,
-    smartBackspace: true,
-  });
-  
   //TODO: custom progress bar script----------->
 
 const progress = document.getElementById("progressbar");
