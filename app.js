@@ -305,3 +305,7 @@ interestSec.addEventListener('mouseleave', function () {
 })
 
 
+// const loader = document.querySelector('.loader');
+// setTimeout(() => {
+//     $('.loader').fadeToggle()
+// }, 3000);
