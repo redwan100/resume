@@ -699,6 +699,7 @@ img{
 
 /* TODO: Preloader================== */
 
+
 .loader{
     position: absolute;
     top: 0;
@@ -710,3 +711,5 @@ img{
     display: grid;
     place-items: center;
 }
+
+
