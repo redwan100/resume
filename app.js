@@ -306,8 +306,6 @@ interestSec.addEventListener('mouseleave', function () {
 })
 
 // TODO: preloader ===========================
-
-const loader = document.querySelector('.loader');
 window.onload = function () {
     setTimeout(() => {
         $('.loader').fadeToggle();
