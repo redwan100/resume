@@ -186,8 +186,8 @@ const experienceSec = document.getElementById('experience');
 const certificateSec = document.getElementById('certificates');
 const referenceSec = document.getElementById('reference');
 const languageSec = document.getElementById('languages');
-const myName = document.querySelector('.home .home-title');
 const interestSec = document.getElementById('interests');
+const myName = document.querySelector('.home .home-title');
 
 const sectionsArr = [homeSec, profileSec, socialSec, educationSec, skillSec, experienceSec, certificateSec, referenceSec, languageSec, languageSec, interestSec,];
 
@@ -196,6 +196,7 @@ sectionsArr.forEach((section) => {
         section.classList.add('shadow');
         section.style.transition = 'all .2s';
         section.style.transform = `scale(1.1)`;
+        section.style.transform = `scale(1) rotate(5deg) skew(5deg)`;
     })
 })
 
@@ -203,7 +204,7 @@ sectionsArr.forEach((section) => {
     section.addEventListener('mouseleave', function (e) {
         section.classList.remove('shadow');
         section.style.transition = 'all .5s ease-in-out';
-        section.style.transform = `scale(1), rotateY(5deg)`;
+        section.style.transform = `scale(1) rotate(0deg) skew(0deg)`;
     })
 })
 
