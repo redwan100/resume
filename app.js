@@ -281,7 +281,6 @@ referenceSec.addEventListener('mouseleave', function () {
 
 
 
-
 const languageSec = document.getElementById('languages');
 languageSec.addEventListener('mousemove', function () {
     languageSec.classList.add('shadow');
@@ -311,8 +310,6 @@ window.onload = function () {
         $('.loader').fadeToggle();
     }, 3000);
 }
-
-
 
 
 
