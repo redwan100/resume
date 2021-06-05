@@ -46,21 +46,23 @@ window.addEventListener('scroll', scrollActive)
 // ========================scroll top============================
 const scrollTop = document.querySelector('.scroll-top');
 window.addEventListener('scroll', () => {
-    if (this.scrollY > 400) {
+    if (this.scrollY > 300) {
         scrollTop.classList.add('show')
     } else {
         scrollTop.classList.remove('show') 
     }
 })
 
-// scrollTop.addEventListener('click', () => {
-//     scrollTo(0,0)
-// })
-if (scrollTop) {
-    scrollTop.addEventListener('click', (e) => {
-        scrollTo(0,0)
-    })
-}
+scrollTop.addEventListener('click', () => {
+    scrollTo(0,0)
+})
+
+
+// if (scrollTop) {
+//     scrollTop.addEventListener('click', (e) => {
+//         scrollTo(0,0)
+//     })
+// }
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
@@ -112,7 +114,7 @@ let areaCv = document.getElementById('area-cv');
 let resumeButton = document.getElementById('resume-button');
 
 
-// =======================Function to call Html to pdf option==================
+// =============Function to call Html to pdf option==================
 let opt = {
     margin:       0,
     filename:     'myResume.pdf',
@@ -148,11 +150,11 @@ generateResume()
 // typing script----
 var typed = new Typed(".typing", {
     strings: [
-      "And I'm a Freelancer...",
-      "And I'm a Web Designer...",
-      "And I'm a Web Developer...",
+      "And I'm a Freelancer",
+      "And I'm a Web Designer",
+      "And I'm a Web Developer",
       "And I'm a YouTuber...",
-      "And I'm a Self Motivator...",
+      "And I'm a Self Motivator",
       "And I'm a Blogger...",
     ],
     typeSpeed: 30,
@@ -195,8 +197,7 @@ sectionsArr.forEach((section) => {
     section.addEventListener('mousemove', function (e) {
         section.classList.add('shadow');
         section.style.transition = 'all .2s';
-        section.style.transform = `scale(1.1)`;
-        section.style.transform = `scale(1) rotate(5deg) skew(5deg)`;
+        section.style.transform = `translateZ(200px)`;
     })
 })
 
@@ -204,7 +205,7 @@ sectionsArr.forEach((section) => {
     section.addEventListener('mouseleave', function (e) {
         section.classList.remove('shadow');
         section.style.transition = 'all .5s ease-in-out';
-        section.style.transform = `scale(1) rotate(0deg) skew(0deg)`;
+        section.style.transform = `translateZ(0px)`;
     })
 })
 
