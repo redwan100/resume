@@ -153,9 +153,9 @@ var typed = new Typed(".typing", {
       "And I'm a Freelancer",
       "And I'm a Web Designer",
       "And I'm a Web Developer",
-      "And I'm a YouTuber...",
+      "And I'm a YouTuber",
       "And I'm a Self Motivator",
-      "And I'm a Blogger...",
+      "And I'm a Blogger",
     ],
     typeSpeed: 30,
     backSpeed: 10,
@@ -187,25 +187,10 @@ const skillSec = document.getElementById('skills');
 const experienceSec = document.getElementById('experience');
 const certificateSec = document.getElementById('certificates');
 const referenceSec = document.getElementById('reference');
-
-
-referenceSec.addEventListener('mousemove', function () {
-    referenceSec.classList.add('shadow');
-});
-
-referenceSec.addEventListener('mouseleave', function () {
-    referenceSec.classList.remove('shadow');
-    referenceSec.style.transition='.3s'
-})
-
-
-
-
 const languageSec = document.getElementById('languages');
 const interestSec = document.getElementById('interests');
-const myName = document.querySelector('.home .home-title');
 
-const sectionsArr = [homeSec, profileSec, socialSec, educationSec, skillSec, experienceSec, certificateSec, referenceSec, languageSec, languageSec, interestSec,];
+const sectionsArr = [homeSec, profileSec, socialSec, educationSec, skillSec, experienceSec, certificateSec, referenceSec, languageSec, interestSec];
 
 sectionsArr.forEach((section) => {
     section.addEventListener('mousemove', function (e) {
@@ -228,11 +213,19 @@ sectionsArr.forEach((section) => {
 
 
 // TODO: preloader ===========================
-window.onload = function () {
+
+
+const loader = document.querySelector('.loader');
+
+// window.onload = setTimeout(() => {
+//     $('.loader').fadeToggle();
+// }, 3000);
+
+if (window.onload) {
     setTimeout(() => {
-        $('.loader').fadeToggle();
-    }, 1000);
+        loader.style.visibility = 'hidden';
+    }, 3000);
+} else {
+    loader.style.visibility = 'visible';
 }
-
-
 

@@ -710,6 +710,9 @@ img{
     z-index: 11;
     display: grid;
     place-items: center;
+    visibility: visible;
+    transition: .3s;
 }
+
 
 
