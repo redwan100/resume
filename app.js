@@ -178,140 +178,45 @@ window.onscroll = function () {
 // TODO: section shadow script--------------
 
 const homeSec = document.getElementById('home');
-const myName = document.querySelector('.home .home-title');
-
-
-homeSec.addEventListener('mousemove', function () {
-    homeSec.classList.add('shadow');
-})
-
-homeSec.addEventListener('mouseleave', function (e) {
-
-    homeSec.classList.remove('shadow');
-});
-
-
-// TODO: section shadow script--------------
-
 const socialSec = document.querySelector('.social-section');
-
-socialSec.addEventListener('mousemove', function (e) {
-    socialSec.classList.add('shadow');
-});
-
-
-
-socialSec.addEventListener('mouseleave', function () {
-    socialSec.classList.remove('shadow');
-    socialSec.style.transition = '.3s'
-})
-
-
-
 const profileSec = document.getElementById('profile');
-profileSec.addEventListener('mousemove', function () {
-    profileSec.classList.add('shadow');
-});
-
-
-
-
-
-
-profileSec.addEventListener('mouseleave', function () {
-    profileSec.classList.remove('shadow');
-    profileSec.style.transition='.3s'
-})
-
-
 const educationSec = document.getElementById('education');
-educationSec.addEventListener('mousemove', function () {
-    educationSec.classList.add('shadow');
-});
-
-educationSec.addEventListener('mouseleave', function () {
-    educationSec.classList.remove('shadow');
-    educationSec.style.transition='.3s'
-})
-
-
 const skillSec = document.getElementById('skills');
-skillSec.addEventListener('mousemove', function () {
-    skillSec.classList.add('shadow');
-});
-
-skillSec.addEventListener('mouseleave', function () {
-    skillSec.classList.remove('shadow');
-    skillSec.style.transition='.3s'
-})
-
 const experienceSec = document.getElementById('experience');
-experienceSec.addEventListener('mousemove', function () {
-    experienceSec.classList.add('shadow');
-});
-
-experienceSec.addEventListener('mouseleave', function () {
-    experienceSec.classList.remove('shadow');
-    experienceSec.style.transition = '.3s'
-})
-
-
-
-
 const certificateSec = document.getElementById('certificates');
-certificateSec.addEventListener('mousemove', function () {
-    certificateSec.classList.add('shadow');
-});
-
-certificateSec.addEventListener('mouseleave', function () {
-    certificateSec.classList.remove('shadow');
-    certificateSec.style.transition='.3s'
-})
-
-
 const referenceSec = document.getElementById('reference');
-referenceSec.addEventListener('mousemove', function () {
-    referenceSec.classList.add('shadow');
-});
-
-referenceSec.addEventListener('mouseleave', function () {
-    referenceSec.classList.remove('shadow');
-    referenceSec.style.transition='.3s'
-})
-
-
-
-
 const languageSec = document.getElementById('languages');
-languageSec.addEventListener('mousemove', function () {
-    languageSec.classList.add('shadow');
-});
-
-languageSec.addEventListener('mouseleave', function () {
-    languageSec.classList.remove('shadow');
-    languageSec.style.transition='.3s'
-})
-
-
-
-
+const myName = document.querySelector('.home .home-title');
 const interestSec = document.getElementById('interests');
-interestSec.addEventListener('mousemove', function () {
-    interestSec.classList.add('shadow');
-});
 
-interestSec.addEventListener('mouseleave', function () {
-    interestSec.classList.remove('shadow');
-    interestSec.style.transition='.3s'
+const sectionsArr = [homeSec, profileSec, socialSec, educationSec, skillSec, experienceSec, certificateSec, referenceSec, languageSec, languageSec, interestSec,];
+
+sectionsArr.forEach((section) => {
+    section.addEventListener('mousemove', function (e) {
+        section.classList.add('shadow');
+        section.style.transition = 'all .2s';
+        section.style.transform = `scale(1.1)`;
+    })
 })
+
+sectionsArr.forEach((section) => {
+    section.addEventListener('mouseleave', function (e) {
+        section.classList.remove('shadow');
+        section.style.transition = 'all .5s ease-in-out';
+        section.style.transform = `scale(1), rotateY(5deg)`;
+    })
+})
+
+
+
+
 
 // TODO: preloader ===========================
 window.onload = function () {
     setTimeout(() => {
         $('.loader').fadeToggle();
-    }, 3000);
+    }, 1000);
 }
-
 
 
 
