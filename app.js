@@ -187,6 +187,20 @@ const skillSec = document.getElementById('skills');
 const experienceSec = document.getElementById('experience');
 const certificateSec = document.getElementById('certificates');
 const referenceSec = document.getElementById('reference');
+
+
+referenceSec.addEventListener('mousemove', function () {
+    referenceSec.classList.add('shadow');
+});
+
+referenceSec.addEventListener('mouseleave', function () {
+    referenceSec.classList.remove('shadow');
+    referenceSec.style.transition='.3s'
+})
+
+
+
+
 const languageSec = document.getElementById('languages');
 const interestSec = document.getElementById('interests');
 const myName = document.querySelector('.home .home-title');
@@ -219,8 +233,6 @@ window.onload = function () {
         $('.loader').fadeToggle();
     }, 1000);
 }
-
-
 
 
 
