@@ -62,7 +62,7 @@ if (scrollTop) {
     scrollTop.addEventListener('click', (e) => {
         scrollTo(0,0)
     })
-}
+} 
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
