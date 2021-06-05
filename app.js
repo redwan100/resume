@@ -217,15 +217,8 @@ sectionsArr.forEach((section) => {
 
 const loader = document.querySelector('.loader');
 
-// window.onload = setTimeout(() => {
-//     $('.loader').fadeToggle();
-// }, 3000);
-
-if (window.onload) {
+window.onload = function () {
     setTimeout(() => {
-        loader.style.visibility = 'hidden';
-    }, 3000);
-} else {
-    loader.style.visibility = 'visible';
+        $('.loader').fadeToggle();
+    },3000)
 }
-
